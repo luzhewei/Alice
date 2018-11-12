@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.alicemagic.org/blog">
-  <title>从零开始学SS(1) | 爱丽丝魔法结社</title>
+  <title>冒个泡 | 爱丽丝魔法结社</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="打开SS的代码，我们可以看到它的代码量其实很少，总共加起来也就20来个文件，每个文件也不是很大。为什么这么少的代码量就可以实现这么强大的功能，现在的我也很好奇。 我们就先开始看没有依赖别的文件的文件吧，比如 1. SS\common.py.common里面首先定义了一些hmac的函数，因为不知道他们是怎么被用的，等用的时候再看。TODO： HMAC 下面是它为socket模板添加了两个方法，ine">
-<meta name="keywords" content="技术,学习,SS">
+  <meta name="description" content="许久许久没有管这玩意儿了啊。。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始学SS(1)">
-<meta property="og:url" content="http://www.alicemagic.org/blog/201711/从零开始学SS-1/index.html">
+<meta property="og:title" content="冒个泡">
+<meta property="og:url" content="http://www.alicemagic.org/blog/201811/冒个泡/index.html">
 <meta property="og:site_name" content="爱丽丝魔法结社">
-<meta property="og:description" content="打开SS的代码，我们可以看到它的代码量其实很少，总共加起来也就20来个文件，每个文件也不是很大。为什么这么少的代码量就可以实现这么强大的功能，现在的我也很好奇。 我们就先开始看没有依赖别的文件的文件吧，比如 1. SS\common.py.common里面首先定义了一些hmac的函数，因为不知道他们是怎么被用的，等用的时候再看。TODO： HMAC 下面是它为socket模板添加了两个方法，ine">
-<meta property="og:updated_time" content="2017-11-19T07:17:38.184Z">
+<meta property="og:description" content="许久许久没有管这玩意儿了啊。。">
+<meta property="og:updated_time" content="2018-11-12T17:36:01.920Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始学SS(1)">
-<meta name="twitter:description" content="打开SS的代码，我们可以看到它的代码量其实很少，总共加起来也就20来个文件，每个文件也不是很大。为什么这么少的代码量就可以实现这么强大的功能，现在的我也很好奇。 我们就先开始看没有依赖别的文件的文件吧，比如 1. SS\common.py.common里面首先定义了一些hmac的函数，因为不知道他们是怎么被用的，等用的时候再看。TODO： HMAC 下面是它为socket模板添加了两个方法，ine">
+<meta name="twitter:title" content="冒个泡">
+<meta name="twitter:description" content="许久许久没有管这玩意儿了啊。。">
   
     <link rel="alternative" href="/atom.xml" title="爱丽丝魔法结社" type="application/atom+xml">
   
@@ -140,43 +139,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-从零开始学SS-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-冒个泡" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      从零开始学SS(1)
+      冒个泡
     </h1>
   
 
         
         <a href="" class="archive-article-date">
-  	<time datetime="2017-11-19T07:04:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-19</time>
+  	<time datetime="2018-11-12T17:35:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>打开SS的代码，我们可以看到它的代码量其实很少，总共加起来也就20来个文件，每个文件也不是很大。<br>为什么这么少的代码量就可以实现这么强大的功能，现在的我也很好奇。</p>
-<p>我们就先开始看没有依赖别的文件的文件吧，比如</p>
-<h1 id="1-SS-common-py"><a href="#1-SS-common-py" class="headerlink" title="1. SS\common.py."></a>1. SS\common.py.</h1><p><code>common</code>里面首先定义了一些hmac的函数，因为不知道他们是怎么被用的，等用的时候再看。<br><em>TODO： HMAC</em></p>
-<h2 id="下面是它为socket模板添加了两个方法，inet-pton和inet-ntop。"><a href="#下面是它为socket模板添加了两个方法，inet-pton和inet-ntop。" class="headerlink" title="下面是它为socket模板添加了两个方法，inet_pton和inet_ntop。"></a>下面是它为socket模板添加了两个方法，<code>inet_pton</code>和<code>inet_ntop</code>。</h2><p>根据<a href="https://docs.python.org/2/library/socket.html" target="_blank" rel="external">这个文档</a>这两个函数是在2.3版本引进的，但是好像也有不少帖子说2.7也没有这两个。Anyway，既然没有，那就手动加吧。<br>它们主要是用来对ip地址格式的string和bytes之间的转换，上面的文档已经说得很清楚了。<br>关于ipv4，有另外两个方法aton和ntoa，带”p”的函数主要是引入来处理ipv6的，所以它们多带了一个参数叫family，用以区分是v4还是v6，当前family只可以取值为<code>socket.AF_INET</code>和<code>socket.AF_INET6</code>。</p>
-<p>我们趁机来复习一下ipv6吧，众所周知ipv4就是形如”192.168.1.1”的地址，每个数字代表一个8位二进数，因而是一组32位的bytes。除开内网占位的一些字段不谈，32位数一共也不到43亿个，人手都不到一个。<br>ipv6用上了128位地址，再也不怕地址不够用。<br>ipv6的string表示法多种多样，以至于<a href="https://tools.ietf.org/html/rfc5952" target="_blank" rel="external">专门有一个RFC</a>去描述它。具体来说我们可以用冒号(:)隔开8组16位（4个16进制位）,从而你能看到形如<code>ffff:1111:0000:0000:0044:0005:0000:7777</code>的完整表示。然后每一组前头的0可省，重复组0可以用双冒号（双冒号只能出现一次），所以同一个地址也能写成<code>ffff:1111::44:5:0:7777</code>，这就要短多了。</p>
-<p>顺带一提，<a href="https://tools.ietf.org/html/rfc4291#section-2.5.5" target="_blank" rel="external">ipv6有两种可以表示ip4v的方法</a>，都是用后32位表示一个ipv4地址，前面96位略有不同。<br>IPv4-Compatible IPv6 Address：是前96位都置0<br>IPv4-Mapped IPv6 Address：是前80位置0中间16位全是1<br>至于分别在什么场合用到我现在也不知道。</p>
-<p>在SS自定义的pton里处理ipv6版ipv4地址时会报错，这是因为py3的map不再直接返回一个列表而是返回一个map对象，要给它显性转成list才能像2一样work。在后来的类里作者是有把map转list的，说明这里根本没有被py3跑到过。<br>（btw，作者把参数名写差了，ntop是把bytes变str，它的参数写成了ipstr, pton反之。）<br>（btw2，它这里ntop最终没有直接输出string，而是把string强制to_bytes了，与built-in函数的行为不一样，我感觉很慌。）</p>
-<h2 id="然后是几个地址的函数。"><a href="#然后是几个地址的函数。" class="headerlink" title="然后是几个地址的函数。"></a>然后是几个地址的函数。</h2><p><code>pack_header</code>是把地址用bytes表示，支持ipv4，v6，和字符串的host，有一个TODO表示它现在最多支持255个字节，以后打算更多？（可惜没有以后了）<br>这里还用到了一个叫<a href="https://docs.python.org/3/library/struct.html" target="_blank" rel="external"><code>struct</code></a>的模块，这个模块是用来把c里面的struct表示成python里的bytes。所有的pack都用了”&gt;H”，既大端序（big-endian），不知道这里是不是有什么理由。（也许是因为网络传输一般用的是大端序？）<br>python2里面struct.pack的返回值是str，但是可以加在bytes的后面。python3里面虽然bytes不能与str相加但是它struct.pack的返回值改成了bytes，所以最终<code>bytes+pack()</code>这段代码都能work，真是惊奇。</p>
-<p><code>parse_header</code>就是把pack过的拆出来。里面有一个操作是把字节ord()成数字再跟预定义的数字比。。不知道这个操作有什么意义，我觉得应该把那些预定义的都标为byte就行了，anyway这不重要。<br>着重是对host的parse,我们在pack里面见过host型地址的格式是1个表类型的字节，1个表长度(n ~ 1,255)的字节，2个表端口的字节，n个表示实际地址的字节，如此是4+n个字节。<br>对比<code>ADDRTYPE</code>的时候都用MASK与了，不知道是不是跟这个文件中没有使用到的<code>ADDRTYPE_AUTH</code>有关。<br>这个函数最后返回的是一个元组，包括地址类型(int)，地址数据(bytes，对于ip地址，直接把地址字符串以utf8 encode，对于host，则是从数据包中抓出来的raw的bytes)，端口和头长度。</p>
-<p>（以前很喜欢动态类型的python，现在c#写多了，什么变量都想搞清楚它的类型。不知道是好事还是坏事。）</p>
-<h2 id="common-py的收尾是一个类"><a href="#common-py的收尾是一个类" class="headerlink" title="common.py的收尾是一个类"></a>common.py的收尾是一个类</h2><p><code>IPNetwork</code>类，用来存一组IP和判断是否包含某个ip地址。实现里IP都用单个数字来表示，仰仗着py能够做<code>number &lt;&lt; 64</code>这种骚操作，有点意思。<br>它还支持网段，因为我对这一块也不太熟，所以查了一下。</p>
-<p>我们经常能看到诸如<code>127.0.0.0/24</code>的表示。这里的<code>/24</code>是什么意思，我从来没有深究过（惭愧）。<br>wiki了一下入口的两个词条<a href="https://en.wikipedia.org/wiki/Subnetwork" target="_blank" rel="external">Subnetwork</a>和<a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank" rel="external">CIDR</a>，之后就是跳啊跳了。</p>
-<p>综合一下读到的信息来说（我的理解可能有误），事情是这样的。<br>最最早的开荒年代，大概连入网的每一台机子有一个IP。但是随着时代的进步，一个是公网IP不够用，一个是并不是所有的机器都需要一个公网的IP。<br>最开始一个ip地址用它的前8个比特用来表示一个网段，后面剩下的24个表示这个子网里面的实际机器。但是大伙儿后来发现网段不够多。所以又引入了“分类网络”（Classful network），B类我用前16位代表网段，C类我用前24位代表网段。<br>但是这样8个8个分很尴尬。对多数公司而言，8位（256）太少而16位（65536）又太多。能不能用任意长度来代表网段呢？这就是CIDR，诸如<code>127.0.0.0/24</code>这样的表示法被叫作CIDR notation，代表说这个Ip前24位代表网段，后8位代表主机。ipv6也可以套用这种用法，如：<code>2001:db8::/32</code>。<br>我们以前在设置windows ip的时候也看到过形如<code>255.255.255.0</code>的子网掩码，是用来和ip地址做与运算的，也即把前面多少位拿出来做prefix。</p>
-<p>（我们可以在iana的网站上查到<a href="https://www.iana.org/assignments/ipv4-address-space/ipv4-address-space.xhtml" target="_blank" rel="external">谁注册了旧A类网</a>，因吹斯汀。）</p>
-<p>虽然总体感觉网络基础知识还不充分，但是我觉得可以先放一放继续看SS代码了。</p>
-<p>在这个类的实现里，添加ip的时候，它只会添加prefix，即如果输入了网段，如<code>127.0.0.0/24</code>，它只会把ip地址存为<code>127.0.0</code>（的int值）。<br>如果没有手动指定网段，那么它会把末尾的0都拿掉，比如<code>192.168.1.1</code>末尾是1，所以prefix是完整的32长，而<code>192.0.2.0</code>是23（不知道为什么要做这个处理）。<br>然后有个小bug是它在logging.warn没有打出正确的前缀长度，应该把<code>addr_len</code>替换为<code>addr_len - prefix_size</code>。</p>
-<p>剩下的都是unit tests，看看用法，common就算完了。<br>当然，这只是千里之行的足下第一步。</p>
+        <p>许久许久没有管这玩意儿了啊。。</p>
 
       
 
@@ -185,25 +168,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -254,7 +218,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.alicemagic.org/blog/201711/从零开始学SS-1/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.alicemagic.org/blog/201811/冒个泡/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,18 +232,9 @@
   
 <nav id="article-nav">
   
-    <a href="../../201811/冒个泡/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          冒个泡
-        
-      </div>
-    </a>
   
-  
-    <a href="../从零开始学SS-0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">从零开始学SS(0)</div>
+    <a href="../../201711/从零开始学SS-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">从零开始学SS(1)</div>
       <i class="icon-circle-right"></i>
     </a>
   
